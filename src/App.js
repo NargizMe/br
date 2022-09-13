@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {Project} from './components/project';
+import {Navbar} from './components/navbar';
+import {Header} from './components/header';
+import {Location} from './components/location';
+import {About} from './components/about';
+import {Contact} from './components/contact';
+import {Footer} from './components/footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Header/>
+      <div className="w3-content w3-padding" style={{maxWidth:'1564px'}}>
+        <Project/>
+        <About/>
+        <Contact/>
+        <Location/>
+      </div>
+      <Footer/>
+    </>
   );
 }
 
